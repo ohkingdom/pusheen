@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Place of Worship</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/custom.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-alt"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5zm10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5z" />
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link active" href="../index.html">Home <span class="sr-only"></span></a>
+                    <a class="nav-link" href="#">Dashboard</a>
+                    <a class="nav-link" href="site/testing.html">Testing</a>
+                    <a class="nav-link" href="https://github.com/ohkingdom/pusheen">GitHub</a>
+                    <a class="nav-link" href="#">About</a>
+                </div>
+        </nav>
+
+        <div class="row mx-1">
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-dark">
+                <h1 class="h1">Get Started!</h1>
+            </div>
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow mb-5 border border-dark rounded-lg">
+                <div class="row align-items-center bg-tan">
+                    <div class="col-lg-4 col-md-4">
+                        <img src="../media/image/logon_image.jpg" class="mx-auto d-block" alt="...">
+                    </div>
+                    <div class="col-lg-8 col-md-8 p-lg-5 p-md-5 px-3 py-4 bg-white">
+                        <div id="signUpForm">
+                            <h2 class="h2 text-center text-dark mb-3">Sign Up</h2>
+                            <div class="form-group">
+                                <label for="userFullName">First Name<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="userFullName" onblur="checkUserFullName()"
+                                    placeholder="">
+                                <small id="userFullNameError" class="form-text text-danger">This field must be
+                                    filled.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSurname">Last Name<span class="text-danger ml-1">*</span></label>
+                                <input type="text" class="form-control" id="userSurname" onblur="checkUserSurname()"
+                                    placeholder="">
+                                <small id="userSurnameError" class="form-text text-danger">This field must be
+                                    filled.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userEmail">Email Address<span class="text-danger ml-1">*</span></label>
+                                <input type="email" class="form-control" id="userEmail" onblur="checkUserEmail()"
+                                    placeholder="">
+                                <small id="userEmailError" class="form-text text-danger">Please check your email
+                                    address.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userPassword">Password<span class="text-danger ml-1">*</span></label>
+                                <input type="password" class="form-control" id="userPassword"
+                                    onblur="checkUserPassword()" placeholder="">
+                                <small id="userPasswordError" class="form-text text-danger">Your password must be a combintation of
+                                    uppercase, lowercase, and more than 10 characters.</small>
+                            </div>
+                            <button type="button" class="btn btn-outline-primary text-uppercase mb-3"
+                                onclick="signUp()">Sign Up</button>
+                            <p>Already registered? <a href="../index.html"><strong
+                                        class="text-primary text-uppercase showSignInForm">Sign In</strong></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="container py-5">
+                <div class="container">
+                    <p class="float-right">
+                        <a href="#">Back to top</a>
+                    </p>
+                    <p>Made with love ❤️</p>
+                    <p>Dominic McRae 2020.</p>
+                </div>
+            </footer>
+
+        </div>
+
+        <!-- Firebase SDK -->
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyD-WLzD41FiPgyHR9c5p8KlosgYdcimL7I",
+                authDomain: "website-38d24.firebaseapp.com",
+                databaseURL: "https://website-38d24.firebaseio.com",
+                projectId: "website-38d24",
+                storageBucket: "website-38d24.appspot.com",
+                messagingSenderId: "1042501725992",
+                appId: "1:1042501725992:web:5ec56c5c7fd42c960aaa1d",
+                measurementId: "G-8YMMQ8ZE92"
+            };
+
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
+
+</body>
+
+</html>

@@ -7,16 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>A Place of Worship</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#"><svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-alt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5zm10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5z"/>
-              </svg></a>
+        <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"><svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-alt"
+                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M1 13.5a.5.5 0 0 0 .5.5h3.797a.5.5 0 0 0 .439-.26L11 3h3.5a.5.5 0 0 0 0-1h-3.797a.5.5 0 0 0-.439.26L5 13H1.5a.5.5 0 0 0-.5.5zm10 0a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 0-1h-3a.5.5 0 0 0-.5.5z" />
+                </svg></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,28 +27,111 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-link" href="site\testing.html">Testing</a>
                     <a class="nav-link" href="#">Dashboard</a>
-                    <a class="nav-link" href="#">GitHub</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">About</a>
+                    <a class="nav-link" href="site/testing.html">Testing</a>
+                    <a class="nav-link" href="https://github.com/ohkingdom/pusheen">GitHub</a>
+                    <a class="nav-link" href="#">CV</a>
+                    <a class="nav-link" href="#">About</a>
+                    <span>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                        Sign In
+                    </button>
+                </span>
                 </div>
             </div>
-        </nav>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">
+                    <img src="media\image\nav_icon_alt.png" class="rounded-circle border-primary" width="40" height="40" alt="" loading="lazy">
+                  </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site/testing.html">Testing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/ohkingdom/pusheen">GitHub</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+                <button type="button" class="btn btn-sm btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">
+                    Sign In
+                </button>
+          </nav>
 
         <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-                to
-                featured content or information.</p>
+            <h1 class="display-4">Hello, you!</h1>
+            <p class="lead">Welcome to where I experiment with web development, testing, and CI/CD.</p>
             <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">View CV</a>
+            <p>The webpage is built with Boostrap and Firebase, testing is written in Java with Selenium, and the automation runs on Jenkins.</p>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal">
+                View Profile
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLabel">Sign In</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div id="signInForm">
+                                <div class="form-group">
+                                    <label for="userSIEmail">Email address<span
+                                            class="text-danger ml-1">*</span></label>
+                                    <input type="email" class="form-control" id="userSIEmail"
+                                        onblur="checkUserSIEmail()" placeholder="mail@mail.com">
+                                    <small id="userSIEmailError" class="form-text text-danger">Please check your
+                                        login information.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="userSIPassword">Password<span class="text-danger ml-1">*</span></label>
+                                    <input type="password" class="form-control" id="userSIPassword"
+                                        onblur="checkUserSIPassword()" placeholder="password">
+                                    <small id="userSIPasswordError" class="form-text text-danger">Please check your
+                                        password.</small>
+                                </div>
+                                <button type="button" class="btn btn-outline-warning text-uppercase mb-3"
+                                    onclick="signIn()">Sign In</button>
+                                <p>Not a member yet? Become a member: <a href="./site/sign-up.html"><strong
+                                            class="text-warning text-uppercase showSignUpForm">Sign Up</strong></a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="row">
             <div class="col-sm-4 pb-3">
                 <div class="card h-100">
-                    <img src="https://picsum.photos/640/360" class="card-img-top img-fluid" alt="...">
+                    <img src="media\image\blog_yarn.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Yarn Selection</h5>
                         <p class="card-text">Life is full of big decisions, whether it's choosing a collar or a
@@ -66,11 +152,11 @@
             </div>
             <div class="col-sm-4 pb-3">
                 <div class="card h-100">
-                    <img src="https://picsum.photos/640/360" class="card-img-top img-fluid" alt="...">
+                    <img src="media\image\blog_pizza.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Pizza Topping Quiz</h5>
                         <p class="card-text">Take this quick survey to find out what your preferred pizza topping is,
-                            and why it's anchovies anyway.
+                            and why it's anchovies with pineapple.
                         </p>
                     </div>
                     <div class="card-footer bg-transparent border-white">
@@ -86,7 +172,7 @@
             </div>
             <div class="col-sm-4 pb-3">
                 <div class="card h-100">
-                    <img src="https://picsum.photos/640/360" class="card-img-top img-fluid" alt="...">
+                    <img src="media\image\blog_code.jpg" class="card-img-top img-fluid" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Coding for Cats</h5>
                         <p class="card-text">MeowScript? Purr++? PAWBASIC?
@@ -106,25 +192,39 @@
             </div>
         </div>
 
-    <footer class="container py-5">
-        <div class="container">
-          <p class="float-right">
-            <a href="#">Back to top</a>
-          </p>
-          <p>Made with love ❤️</p>
-          <p>Dominic McRae 2020.</p>
-        </div>
-      </footer>
+        <footer class="container py-5">
+            <div class="container">
+                <p class="float-right">
+                    <a href="#">Back to top</a>
+                </p>
+                <p>Made with love ❤️</p>
+                <p>Dominic McRae 2020.</p>
+            </div>
+        </footer>
 
     </div>
 
-    <!-- Firebase SDKs -->
-    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
-    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
-    <script src="/__/firebase/7.17.1/firebase-auth.js"></script>
-    <script src="/__/firebase/7.17.1/firebase-firestore.js"></script>
-    <!-- Initialize Firebase -->
-    <script src="/__/firebase/init.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyD-WLzD41FiPgyHR9c5p8KlosgYdcimL7I",
+            authDomain: "website-38d24.firebaseapp.com",
+            databaseURL: "https://website-38d24.firebaseio.com",
+            projectId: "website-38d24",
+            storageBucket: "website-38d24.appspot.com",
+            messagingSenderId: "1042501725992",
+            appId: "1:1042501725992:web:5ec56c5c7fd42c960aaa1d",
+            measurementId: "G-8YMMQ8ZE92"
+        };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
 
 </body>
 

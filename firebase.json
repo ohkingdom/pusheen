@@ -12,6 +12,7 @@
     ]
   },
   "hosting": {
+    "site": "website-38d24",
     "public": "public",
     "ignore": [
       "firebase.json",
