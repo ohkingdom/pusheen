@@ -41,7 +41,7 @@
             </div>
         </nav> -->
 
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded sticky-top">
             <a class="navbar-brand" href="#">
                 <img src="media\image\nav_icon_alt.png" class="rounded-circle border-primary" width="40" height="40"
                     alt="" loading="lazy">
@@ -73,10 +73,73 @@
                     </li>
                 </ul>
                 <button type="button" class="btn btn-sm btn-outline-warning my-2 my-sm-0" data-toggle="modal"
-                    data-target="#exampleModal">
+                    data-target="#signinModal">
                     Sign In
                 </button>
         </nav>
+
+        <!-- Sign-in Modal -->
+        <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="signinModalLabel">Sign In</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="signInForm">
+                            <div class="form-group">
+                                <label for="userSIEmail">Email address<span class="text-danger ml-1">*</span></label>
+                                <input type="email" class="form-control" id="userSIEmail" onblur="checkUserSIEmail()"
+                                    placeholder="mail@mail.com">
+                                <small id="userSIEmailError" class="form-text text-danger">Please check your
+                                    login information.</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="userSIPassword">Password<span class="text-danger ml-1">*</span></label>
+                                <input type="password" class="form-control" id="userSIPassword"
+                                    onblur="checkUserSIPassword()" placeholder="password">
+                                <small id="userSIPasswordError" class="form-text text-danger">Please check your
+                                    password.</small>
+                            </div>
+                            <button type="button" class="btn btn-outline-warning text-uppercase mb-3"
+                                onclick="signIn()">Sign In</button>
+                            <p>Not a member yet? Become a member: <a href="./site/sign-up.html"><strong
+                                        class="text-warning text-uppercase showSignUpForm">Sign Up</strong></a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile/CV Modal -->
+        <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="profileLabel">Profile/CV</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="embed-responsive" style='padding-bottom:90%'>
+                            <object data="./media/document/CV_McRae_Dominic.pdf" type="application/pdf" width='100%'
+                                height='100%'></object>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="jumbotron">
             <h1 class="display-4">Hello, you!</h1>
@@ -85,51 +148,10 @@
             <p>The webpage is built with Boostrap and Firebase, testing is written in Java with Selenium, and the
                 automation runs on Jenkins.</p>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModal">
-                View Profile
+            <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#profileModal">
+                View Profile/CV
             </button>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title" id="exampleModalLabel">Sign In</h2>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="signInForm">
-                                <div class="form-group">
-                                    <label for="userSIEmail">Email address<span
-                                            class="text-danger ml-1">*</span></label>
-                                    <input type="email" class="form-control" id="userSIEmail"
-                                        onblur="checkUserSIEmail()" placeholder="mail@mail.com">
-                                    <small id="userSIEmailError" class="form-text text-danger">Please check your
-                                        login information.</small>
-                                </div>
-                                <div class="form-group">
-                                    <label for="userSIPassword">Password<span class="text-danger ml-1">*</span></label>
-                                    <input type="password" class="form-control" id="userSIPassword"
-                                        onblur="checkUserSIPassword()" placeholder="password">
-                                    <small id="userSIPasswordError" class="form-text text-danger">Please check your
-                                        password.</small>
-                                </div>
-                                <button type="button" class="btn btn-outline-warning text-uppercase mb-3"
-                                    onclick="signIn()">Sign In</button>
-                                <p>Not a member yet? Become a member: <a href="./site/sign-up.html"><strong
-                                            class="text-warning text-uppercase showSignUpForm">Sign Up</strong></a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
 
         <div class="row">
