@@ -1,5 +1,6 @@
 # pusheen
-A place of worship.
+
+![Website screenshot](/image.png)
 
 The goal is to build and test a website, gaining experience along the way.
 
