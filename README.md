@@ -2,7 +2,7 @@
 
 https://mcrae.dev
 
-![Website screenshot](/image.png)
+<img src="/image.png" width="75%" height="75%">
 
 The goal is to build and test a website, gaining experience along the way.
 
